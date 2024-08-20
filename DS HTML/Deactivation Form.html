@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Deactivation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:whitesmoke;
+        }
+        div {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:white;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        button {
+            background-color:blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Account Deactivation</h1>
+        <p>If you want to deactivate your account, please fill out this form.</p>
+        
+        <form action="/submit-deactivation" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="reason">Reason for Deactivation:</label>
+            <select id="reason" name="reason" required>
+                <option value="">-- Select Reason --</option>
+                <option value="privacy">Privacy Concerns</option>
+                <option value="no_use">Not Using the Account</option>
+                <option value="technical_issues">Technical Issues</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="feedback">Additional Feedback (Optional):</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Tell us more about your decision..."></textarea>
+            
+            <label>
+                <input type="checkbox" id="confirm" name="confirm" required>
+                I understand the consequences and wish to proceed.
+            </label>
+            
+            <button type="submit">Deactivate Account</button>
+            <button type="reset">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

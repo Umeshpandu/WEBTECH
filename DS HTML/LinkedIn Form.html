@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Social Media Form </title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 1%;
+        }
+        h1{
+            background-color: aqua;
+            text-align: center;
+            font-size:small;
+            padding: 2%;
+        }
+        form {
+            max-width: 350px;
+            margin:auto;
+            padding: 1%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        input[type="text"],
+        input[type="email"],   
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"] {
+           border:2px solid;
+           width: 100%;
+           font-size: 100%;
+           align-items: center;
+           justify-content: center;
+           box-sizing: border-box;
+           margin-bottom: 2%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> <b> LinkedIn Registeration Form  </b></h1>  
+    <div> 
+    <form action="/submit_registration" method="post">
+    <form> 
+     <label for ="username"> Username: </label> <br>  
+     <input type="text" name="username" id="username"> <br>
+
+     <label for ="Email"> Email: </label>  <br>  
+     <input type="email" name="email" id="email"> <br>
+      
+     <label for ="password"> Password: </label>  <br>  
+     <input type="password" name="pswd" id="pswd"> <br>
+
+     <label for ="phone"> Phone Number: </label>   <br>
+     <input type="tel" name="phone" id="phone"> <br>
+
+     <label for ="dob"> Date Of Birth: </label> <br>   
+     <input type="date" name="dob" id="dob"> <br><br>
+
+     <input type="submit" value="Register"> <br>
+    </div>
+    <p> By registering, you agree to our <a href="#">Privacy Policy</a> </p>
+    </form>
+</body>
+</html>

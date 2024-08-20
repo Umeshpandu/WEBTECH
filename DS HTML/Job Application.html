@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Registration Form</title>
+    <style>
+        body {
+            font-family:sans-serif;
+            background-color:rgb(226, 229, 225);
+        }
+        h2 {
+            color:black;
+            text-align: center;
+        }
+        form {
+            background-color:rgb(33, 150, 183);
+            max-width: 500px;
+            margin:  auto;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="text"]
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button{
+            background-color:rgb(24, 197, 136);
+            color: white;
+            border: none;
+            padding: 10px 230px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Job Application Form</h2>
+    <form action="/submit_registration" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="address">Address: </label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+        <label for="position">Position Applied For:</label>
+        <select id="position" name="position">
+            <option value="1">Data Engineer</option>
+            <option value="2">Data scientist</option>
+            <option value="3">Data analyst</option>
+            <option value="4">Machine Learning engineer</option>
+        </select> <br><br>
+
+        <label for="experience">Years of Experience:</label>
+        <input type="radio" id="exp1" name="experience" value="1 year">
+        <label for="exp1">1 year</label>
+        <input type="radio" id="exp1" name="experience" value="2-3 years">
+        <label for="exp1">2-3 years</label>
+        <input type="radio" id="exp2" name="experience" value="3+ years">
+        <label for="exp2">3+ years</label> <br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" required> <br><br>
+        
+        <label for="coverLetter">Cover Letter:</label>
+        <textarea id="coverLetter" name="coverLetter" rows="4" placeholder="Write your cover letter"></textarea>
+
+        <button type="submit">Register</button> 
+    </form>
+</body>
+</html>
